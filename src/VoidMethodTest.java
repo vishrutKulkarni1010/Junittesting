@@ -3,6 +3,8 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.NoSuchElementException;
+
 public class VoidMethodTest {
 
     private VoidMethodClass lstPersons = new VoidMethodClass();
@@ -28,6 +30,18 @@ public class VoidMethodTest {
     public void testAddMethod(){
         lstPersons.add("LMNO");
         int expected = 4;
+        Assert.assertEquals(expected,lstPersons.size());
+    }
+    @Test
+    public void testRemoveMethod(){
+        lstPersons.remove("PQRS");
+        int expected = 2;
+        Assert.assertEquals(expected,lstPersons.size());
+    }
+    @Test(expected = NoSuchElementException.class)
+    public void testRemoveMethodForException(){
+        lstPersons.remove("xyz");
+        int expected=2;
         Assert.assertEquals(expected,lstPersons.size());
     }
 
