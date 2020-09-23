@@ -22,7 +22,7 @@ public class VoidMethodClass {
         return persons.size();
     }
 
-    public void removeAll(){
+    public void removeAll() {
         persons.clear();
     }
 }

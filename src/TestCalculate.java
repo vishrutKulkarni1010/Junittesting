@@ -25,6 +25,35 @@ public class TestCalculate {
         Assert.assertEquals(expected,actual);
     }
 
+    @Test
+    public void testMultiply(){
+        System.out.println("Test Multiply getting executed");
+        Calculator calc = new Calculator();
+        int a=5;
+        int b=5;
+        int expected = 25;
+        int actual = calc.multiply(a,b);
+        Assert.assertEquals(expected,actual);
+    }
+    @Test
+    public void testDivide(){
+        System.out.print("Test Divide getting executed");
+        Calculator calc = new Calculator();
+        int a =10;
+        int b = 5;
+        int expected=2;
+        Assert.assertEquals(expected,calc.divide(a,b));
+    }
+    @Test(expected = Exception.class)
+    public void testDivideException(){
+        System.out.print("Test Divide getting executed");
+        Calculator calc = new Calculator();
+        int a =10;
+        int b = 0;
+        int expected=2;
+        Assert.assertEquals(expected,calc.divide(a,b));
+    }
+
     @Before
     public void runBeforeEveeryTest(){
         System.out.println("method assoc. with before annotation");
