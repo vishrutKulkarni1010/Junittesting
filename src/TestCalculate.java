@@ -36,7 +36,7 @@ public class TestCalculate {
         Assert.assertEquals(expected,actual);
     }
     @Test
-    public void testDivide(){
+    public void testDivide() throws Exception {
         System.out.print("Test Divide getting executed");
         Calculator calc = new Calculator();
         int a =10;
@@ -45,7 +45,7 @@ public class TestCalculate {
         Assert.assertEquals(expected,calc.divide(a,b));
     }
     @Test(expected = Exception.class)
-    public void testDivideException(){
+    public void testDivideException() throws Exception {
         System.out.print("Test Divide getting executed");
         Calculator calc = new Calculator();
         int a =10;

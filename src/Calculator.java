@@ -11,13 +11,9 @@ public class Calculator {
         return a*b;
     }
 
-    int divide(int a,int b){
+    int divide(int a,int b) throws Exception{
         if(b==0){
-            try {
                 throw new Exception();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
         }
         return a/b;
     }
